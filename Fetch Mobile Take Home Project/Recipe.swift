@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+struct Response: Codable {
+    let recipes: [Recipe]
+}
+
 struct Recipe: Codable {
     let cuisine: String
     let name: String
-    let photo_url_large: String
-    let photo_url_small: String
-    let source_url: String
+    let photoUrlLarge: String
+    let photoUrlSmall: String
+    let sourceUrl: String?
     let uuid: String
-    let youtube_url: String
+    let youtubeUrl: String?
 }
