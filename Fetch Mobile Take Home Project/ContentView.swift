@@ -9,19 +9,54 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var recipes: [Recipe]?
+    @State private var recipes: [Recipe] = []
+    @State private var sortByName: Bool = true
+    @State private var showingErrorMessage: Bool = false
+    @State private var errorMessage: String = ""
     
     var body: some View {
-        List {
-            RecipeView(name: "Dummy", cuisine: "Shitty", photoURL: "e", sourceURL: "s", youtubeURL: "s")
-            RecipeView(name: "Dummy", cuisine: "Shitty", photoURL: "e", sourceURL: "s", youtubeURL: "s")
+        
+        HStack {
+            
+            Text("All recipes")
+                .font(.headline)
+                .padding(.leading)
+            
+            Spacer()
+            
+            Picker("Sort method", selection: $sortByName) {
+                Text("Sort by name")
+                    .tag(true)
+                Text("Sort by cuisine")
+                    .tag(false)
+            }
+            .padding(.trailing)
+            .onChange(of: sortByName) {
+                sortRecipes()
+            }
         }
+        
+        List {
+            if (recipes == []) {
+                Text("No recipes found")
+            } else {
+                ForEach(recipes, id: \.uuid) { recipe in
+                    RecipeView(name: recipe.name, cuisine: recipe.cuisine, photoURL: recipe.photoUrlSmall, sourceURL: recipe.sourceUrl, youtubeURL: recipe.youtubeUrl)
+                }
+                .listRowInsets(EdgeInsets())
+            }
+        }
+        .listStyle(.plain)
         .refreshable {
             await loadRecipes()
         }
         .padding()
         .task {
             await loadRecipes()
+        }
+        .alert("An error has occurred", isPresented: $showingErrorMessage) {
+        } message: {
+            Text(errorMessage)
         }
     }
     
@@ -48,17 +83,31 @@ struct ContentView: View {
     func loadRecipes() async {
         do {
             recipes = try await getRecipes()
-            print("loaded!")
-        } //TODO: change these prints to toasts/popups
-        catch RecipeError.invalidURL {
-            print("Error: Invalid URL")
-        } catch RecipeError.invalidResponse {
-            print("Error: Invalid response")
-        } catch RecipeError.invalidData {
-            print("Error: Invalid data")
-        } catch {
-            print("Error: \(error)")
+            sortRecipes()
         }
+        catch RecipeError.invalidURL {
+            handleError(message: "Invalid URL")
+        } catch RecipeError.invalidResponse {
+            handleError(message: "Invalid response")
+        } catch RecipeError.invalidData {
+            handleError(message: "Invalid data in response")
+        } catch {
+            handleError(message: "Unexpected error: \(error)")
+        }
+    }
+    
+    func sortRecipes() {
+        if sortByName {
+            recipes.sort { $0.name < $1.name }
+        } else {
+            recipes.sort { $0.cuisine < $1.cuisine }
+        }
+    }
+    
+    func handleError(message: String) {
+        recipes = []
+        showingErrorMessage.toggle()
+        errorMessage = message
     }
 }
 

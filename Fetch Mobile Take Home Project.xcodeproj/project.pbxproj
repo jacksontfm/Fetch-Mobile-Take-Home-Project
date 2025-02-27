@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		7A1C0FE42D6BAAB500543DD4 /* PBXContainerItemProxy */ = {
+		7A1C104C2D70602500543DD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7A1C0FAC2D6B910100543DD4 /* Project object */;
 			proxyType = 1;
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		7A1C0FB42D6B910100543DD4 /* Fetch Mobile Take Home Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch Mobile Take Home Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A1C0FE02D6BAAB500543DD4 /* ScoreKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1C10482D70602500543DD4 /* RecipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -27,9 +27,9 @@
 			path = "Fetch Mobile Take Home Project";
 			sourceTree = "<group>";
 		};
-		7A1C0FE12D6BAAB500543DD4 /* ScoreKeeperTests */ = {
+		7A1C10492D70602500543DD4 /* RecipeTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ScoreKeeperTests;
+			path = RecipeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -42,7 +42,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A1C0FDD2D6BAAB500543DD4 /* Frameworks */ = {
+		7A1C10452D70602500543DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,7 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1C0FB62D6B910100543DD4 /* Fetch Mobile Take Home Project */,
-				7A1C0FE12D6BAAB500543DD4 /* ScoreKeeperTests */,
+				7A1C10492D70602500543DD4 /* RecipeTests */,
 				7A1C0FB52D6B910100543DD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1C0FB42D6B910100543DD4 /* Fetch Mobile Take Home Project.app */,
-				7A1C0FE02D6BAAB500543DD4 /* ScoreKeeperTests.xctest */,
+				7A1C10482D70602500543DD4 /* RecipeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,27 +95,27 @@
 			productReference = 7A1C0FB42D6B910100543DD4 /* Fetch Mobile Take Home Project.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7A1C0FDF2D6BAAB500543DD4 /* ScoreKeeperTests */ = {
+		7A1C10472D70602500543DD4 /* RecipeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A1C0FE62D6BAAB500543DD4 /* Build configuration list for PBXNativeTarget "ScoreKeeperTests" */;
+			buildConfigurationList = 7A1C104E2D70602500543DD4 /* Build configuration list for PBXNativeTarget "RecipeTests" */;
 			buildPhases = (
-				7A1C0FDC2D6BAAB500543DD4 /* Sources */,
-				7A1C0FDD2D6BAAB500543DD4 /* Frameworks */,
-				7A1C0FDE2D6BAAB500543DD4 /* Resources */,
+				7A1C10442D70602500543DD4 /* Sources */,
+				7A1C10452D70602500543DD4 /* Frameworks */,
+				7A1C10462D70602500543DD4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A1C0FE52D6BAAB500543DD4 /* PBXTargetDependency */,
+				7A1C104D2D70602500543DD4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				7A1C0FE12D6BAAB500543DD4 /* ScoreKeeperTests */,
+				7A1C10492D70602500543DD4 /* RecipeTests */,
 			);
-			name = ScoreKeeperTests;
+			name = RecipeTests;
 			packageProductDependencies = (
 			);
-			productName = ScoreKeeperTests;
-			productReference = 7A1C0FE02D6BAAB500543DD4 /* ScoreKeeperTests.xctest */;
+			productName = RecipeTests;
+			productReference = 7A1C10482D70602500543DD4 /* RecipeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 					7A1C0FB32D6B910100543DD4 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					7A1C0FDF2D6BAAB500543DD4 = {
+					7A1C10472D70602500543DD4 = {
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 7A1C0FB32D6B910100543DD4;
 					};
@@ -152,7 +152,7 @@
 			projectRoot = "";
 			targets = (
 				7A1C0FB32D6B910100543DD4 /* Fetch Mobile Take Home Project */,
-				7A1C0FDF2D6BAAB500543DD4 /* ScoreKeeperTests */,
+				7A1C10472D70602500543DD4 /* RecipeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -165,7 +165,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A1C0FDE2D6BAAB500543DD4 /* Resources */ = {
+		7A1C10462D70602500543DD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,7 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A1C0FDC2D6BAAB500543DD4 /* Sources */ = {
+		7A1C10442D70602500543DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,10 +192,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7A1C0FE52D6BAAB500543DD4 /* PBXTargetDependency */ = {
+		7A1C104D2D70602500543DD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7A1C0FB32D6B910100543DD4 /* Fetch Mobile Take Home Project */;
-			targetProxy = 7A1C0FE42D6BAAB500543DD4 /* PBXContainerItemProxy */;
+			targetProxy = 7A1C104C2D70602500543DD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -375,7 +375,7 @@
 			};
 			name = Release;
 		};
-		7A1C0FE72D6BAAB500543DD4 /* Debug */ = {
+		7A1C104F2D70602500543DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -383,7 +383,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = name.jackson.ScoreKeeperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = name.jackson.RecipeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -392,7 +392,7 @@
 			};
 			name = Debug;
 		};
-		7A1C0FE82D6BAAB500543DD4 /* Release */ = {
+		7A1C10502D70602500543DD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -400,7 +400,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = name.jackson.ScoreKeeperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = name.jackson.RecipeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -430,11 +430,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A1C0FE62D6BAAB500543DD4 /* Build configuration list for PBXNativeTarget "ScoreKeeperTests" */ = {
+		7A1C104E2D70602500543DD4 /* Build configuration list for PBXNativeTarget "RecipeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A1C0FE72D6BAAB500543DD4 /* Debug */,
-				7A1C0FE82D6BAAB500543DD4 /* Release */,
+				7A1C104F2D70602500543DD4 /* Debug */,
+				7A1C10502D70602500543DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

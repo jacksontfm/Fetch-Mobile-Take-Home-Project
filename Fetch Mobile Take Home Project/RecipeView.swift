@@ -12,33 +12,61 @@ struct RecipeView: View {
     var name: String
     var cuisine: String
     var photoURL: String
-    var sourceURL: String
-    var youtubeURL: String
+    var sourceURL: String?
+    var youtubeURL: String?
     
     var body: some View {
         HStack {
-            Image(systemName: "sun.max.fill")
-                .resizable()
-                .frame(width: 90, height: 90)
+            
+            AsyncImage(url: URL(string: photoURL)!) { image in
+                image
+                    .resizable()
+            } placeholder: {
+                Image(systemName: "sun.max.fill")
+                    .resizable()
+            }
+            .frame(width: 90)
             
             VStack(alignment: .leading) {
+                
                 Text(name)
                     .font(.headline)
+                    .scaledToFit()
+                    .minimumScaleFactor(0.05)
+                    .fixedSize(horizontal: false, vertical: true)
+                
                 Text("Cuisine: \(cuisine)")
+                
                 Spacer()
-                Text("View Full Recipe")
-                Text("View on YouTube")
+                
+                if (sourceURL != nil) {
+                    Link(destination: URL(string: sourceURL!)!) {
+                        Text("View Full Recipe")
+                    }
+                } else {
+                    Text("Full recipe not available")
+                        .foregroundColor(.secondary)
+                }
+                
+                if (youtubeURL != nil) {
+                    Link(destination: URL(string: youtubeURL!)!) {
+                        Text("View on YouTube")
+                    }
+                } else {
+                    Text("YouTube video not available")
+                        .foregroundColor(.secondary)
+                }
             }
             .padding(.leading)
-            .frame(height: 90)
             
             Spacer()
         }
+        .frame(height: 90)
         .padding()
-        .background(.thinMaterial)
+//        .background(.thinMaterial)
     }
 }
 
 #Preview {
-    RecipeView(name: "Seven Cheese Pizza", cuisine: "Tototo", photoURL: "photo.com", sourceURL: "source.com", youtubeURL: "youtube.com")
+    RecipeView(name: "Seven Cheese Pizza", cuisine: "Italian", photoURL: "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/small.jpg", sourceURL: "google.com", youtubeURL: "youtube.com")
 }

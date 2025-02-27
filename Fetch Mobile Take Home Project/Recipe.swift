@@ -11,12 +11,12 @@ struct Response: Codable {
     let recipes: [Recipe]
 }
 
-struct Recipe: Codable {
+struct Recipe: Equatable, Codable {
     let cuisine: String
     let name: String
     let photoUrlLarge: String
     let photoUrlSmall: String
     let sourceUrl: String?
-    let uuid: String
+    let uuid: UUID
     let youtubeUrl: String?
 }
