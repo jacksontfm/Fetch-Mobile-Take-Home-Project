@@ -56,11 +56,12 @@ struct RecipeView: View {
                     Link(destination: URL(string: youtubeURL!)!) {
                         Text("View on YouTube")
                             .foregroundColor(.blue)
+                            .padding(.top, 1)
                     }
-                    .padding(.top, 1)
                 } else {
                     Text("YouTube video not available")
                         .foregroundColor(.secondary)
+                        .padding(.top, 1)
                 }
             }
             .padding(.leading)
