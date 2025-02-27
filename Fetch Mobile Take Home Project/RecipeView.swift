@@ -22,8 +22,9 @@ struct RecipeView: View {
                 image
                     .resizable()
             } placeholder: {
-                Image(systemName: "sun.max.fill")
+                Image(systemName: "fork.knife.circle.fill")
                     .resizable()
+                    .foregroundColor(.secondary)
             }
             .frame(width: 90)
             
