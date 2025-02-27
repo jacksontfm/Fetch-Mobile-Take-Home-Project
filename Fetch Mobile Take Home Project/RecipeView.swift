@@ -21,6 +21,7 @@ struct RecipeView: View {
             AsyncImage(url: URL(string: photoURL)!) { image in
                 image
                     .resizable()
+                    .cornerRadius(10)
             } placeholder: {
                 Image(systemName: "fork.knife.circle.fill")
                     .resizable()
