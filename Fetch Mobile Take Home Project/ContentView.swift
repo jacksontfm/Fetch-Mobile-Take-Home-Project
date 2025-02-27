@@ -36,17 +36,17 @@ struct ContentView: View {
             }
         }
         
-        List {
+        ScrollView {
             if (recipes == []) {
                 Text("No recipes found")
             } else {
-                ForEach(recipes, id: \.uuid) { recipe in
-                    RecipeView(name: recipe.name, cuisine: recipe.cuisine, photoURL: recipe.photoUrlSmall, sourceURL: recipe.sourceUrl, youtubeURL: recipe.youtubeUrl)
+                VStack {
+                    ForEach(recipes, id: \.uuid) { recipe in
+                        RecipeView(name: recipe.name, cuisine: recipe.cuisine, photoURL: recipe.photoUrlSmall, sourceURL: recipe.sourceUrl, youtubeURL: recipe.youtubeUrl)
+                    }
                 }
-                .listRowInsets(EdgeInsets())
             }
         }
-        .listStyle(.plain)
         .refreshable {
             await loadRecipes()
         }

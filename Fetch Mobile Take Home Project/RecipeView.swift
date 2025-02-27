@@ -36,12 +36,14 @@ struct RecipeView: View {
                     .fixedSize(horizontal: false, vertical: true)
                 
                 Text("Cuisine: \(cuisine)")
+                    .font(.subheadline)
                 
                 Spacer()
                 
                 if (sourceURL != nil) {
                     Link(destination: URL(string: sourceURL!)!) {
                         Text("View Full Recipe")
+                            .foregroundColor(.blue)
                     }
                 } else {
                     Text("Full recipe not available")
@@ -51,7 +53,9 @@ struct RecipeView: View {
                 if (youtubeURL != nil) {
                     Link(destination: URL(string: youtubeURL!)!) {
                         Text("View on YouTube")
+                            .foregroundColor(.blue)
                     }
+                    .padding(.top, 1)
                 } else {
                     Text("YouTube video not available")
                         .foregroundColor(.secondary)
@@ -63,7 +67,8 @@ struct RecipeView: View {
         }
         .frame(height: 90)
         .padding()
-//        .background(.thinMaterial)
+        
+        Divider()
     }
 }
 
