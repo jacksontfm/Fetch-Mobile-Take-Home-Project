@@ -1,20 +1,20 @@
 ### Summary: Include screen shots or a video of your app highlighting its features
 
-![image](https://github.com/user-attachments/assets/081ccfc2-ad77-4347-afaa-b94fd2ca0bc2)
+<img src="https://github.com/user-attachments/assets/081ccfc2-ad77-4347-afaa-b94fd2ca0bc2" height="500">
 
 This app is very simple, it is a basic list of recipes called from an API. The recipes populate into a ScrollView. Users can scroll through the full list of recipes and can swipe down from the top to refresh the list. Users can tap the links underneath each recipe to view the full recipe on the web or watch a video demonstration on YouTube. Recipes that do not have an associated website or YouTube video are marked accordingly.
 
 Recipes can be sorted alphabetically by Name or by Cuisine.
 
-![image](https://github.com/user-attachments/assets/0009fbc6-609b-40ae-b9d2-32cb64ee5822)
+<img src="https://github.com/user-attachments/assets/0009fbc6-609b-40ae-b9d2-32cb64ee5822" height="100">
 
 If no recipes are found at the API URL, the app will respond appropriately.
 
-![image](https://github.com/user-attachments/assets/f6da3631-da6d-46be-aeeb-3351db6c5534)
+<img src="https://github.com/user-attachments/assets/f6da3631-da6d-46be-aeeb-3351db6c5534" height="200">
 
 If an error occurs at any point while loading the data from the API, an error popup will let users know what happened.
 
-![image](https://github.com/user-attachments/assets/217743e7-6979-4684-b7f3-dfe798ce61ed)
+<img src="https://github.com/user-attachments/assets/217743e7-6979-4684-b7f3-dfe798ce61ed" height="300">
 
 Three basic tests make sure that the API call is functioning correctly. Recipes are successfully retrieved when the API has data to provide, no recipes are retrieved and the process aborts in the event that the API's data is malformed, and the app displays an empty state when the API contains no data.
 
