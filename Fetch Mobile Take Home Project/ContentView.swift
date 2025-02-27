@@ -60,9 +60,8 @@ struct ContentView: View {
         }
     }
     
-    func getRecipes() async throws -> [Recipe] {
+    func getRecipes(endpoint: String) async throws -> [Recipe] {
         
-        let endpoint = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
         guard let url = URL(string: endpoint) else { throw RecipeError.invalidURL }
         
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -81,8 +80,11 @@ struct ContentView: View {
     }
     
     func loadRecipes() async {
+        
+        let endpoint = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+        
         do {
-            recipes = try await getRecipes()
+            recipes = try await getRecipes(endpoint: endpoint)
             sortRecipes()
         }
         catch RecipeError.invalidURL {
